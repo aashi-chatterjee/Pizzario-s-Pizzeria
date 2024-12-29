@@ -1,0 +1,166 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: blanchedalmond;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.navbar{
+    margin-top: 0%;
+    width: 100%;
+    height: 20px;
+    /* z-index: 10; */
+    background-color: #ac3535;
+}
+
+a {
+    color: rgb(255, 81, 0);
+    text-decoration: none;
+}
+
+.heading {
+    font-size: 3rem;
+    z-index: 5;
+    position: absolute;
+    top: 0px;
+    left: 450px;
+    height: 0rem;
+}
+
+a:hover{
+    color: orange;
+}
+
+table{
+    text-align: center;
+    width: 600px;
+    padding: 10px;
+    border-collapse: collapse;
+}
+
+tr, td, th {
+    padding: 5px;
+    width: 300px;
+}
+
+.border-right{
+    border-right: 1px solid red;
+}
+
+.border-down{
+    border-bottom: 1px solid red;
+}
+
+#menu{
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    top: 0%;
+    transform: translateX(-50%);
+    background-color: salmon;
+    color: #fff;
+    border-radius: 25px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+#menu::before{
+    content: "";
+    position: absolute;
+    left: 51%;
+    bottom: 100%;
+    transform: translateX(-50%);
+    border: 15px solid;
+    border-color:  #0000 #0000 salmon #0000;
+}
+
+#hover-menu:hover #menu{
+    left: 32%;
+    transform: translateY(70%);
+    visibility: visible;
+    opacity: 1;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.box {
+    height: 740px;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.left {
+    width: 990px;
+    position: relative;
+    overflow: hidden;
+    z-index: 3;
+}
+
+#pizza-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.left::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 510px;
+    height: 740px;
+    background-color: blanchedalmond;
+    z-index: 2;
+    transform: skewX(34deg);
+    transform-origin: top left;
+}
+
+.right {
+    width: 500px;
+    position: relative;
+    z-index: 4;
+    background-color: blanchedalmond;
+    display: flex;
+    align-items: center;
+}
+
+.form{
+    margin-top: 70px;
+    font-size: 20px;
+    font-family: monospace;
+}
+
+.form-section{
+    padding: 15px;
+    align-items: center;
+}
+
+.form-section > input, #pizzaSize{
+    height: 20px;
+    width: 200px;
+    background-color: blanchedalmond;
+}
+
+button{
+    margin-top: 20px;
+    margin-right: 50px;
+    height: 40px;
+    width: 90px;
+    background-color: orange;
+}
